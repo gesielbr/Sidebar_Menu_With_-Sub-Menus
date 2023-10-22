@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #000;
+}
+
+.side-bar {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  width: 290px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  overflow-y: auto;
+  transition: 0.5s ease-in-out;
+}
+
+.side-bar.active {
+  left: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.side-bar .menu {
+  width: 100%;
+  margin-top: 80px;
+}
+
+.side-bar .menu .item {
+  position: relative;
+  cursor: pointer;
+}
+
+.side-bar .menu .item a {
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  display: block;
+  padding: 5px 30px;
+  line-height: 60px;
+}
+
+.side-bar .menu .item a:hover {
+  background-color: #8621F8;
+  transition: 0.5s ease;
+}
+
+.side-bar .menu .item i {
+  margin-right: 1rem;
+}
+
+.side-bar .menu .item a .dropdown {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  transition: 0.5s ease;
+}
+
+.side-bar .menu .item .sub-menu {
+  background-color: rgba(255, 255, 255, 0.1);
+  display: none;
+}
+
+.side-bar .menu .item .sub-menu a {
+  padding-left: 80px;
+}
+
+.rotate {
+  transform: rotate(90deg);
+}
+
+.close-btn {
+  position: absolute;
+  color: #fff;
+  font-size: 20px;
+  right: 0;
+  margin: 26px;
+  cursor: pointer;
+}
+
+.menu-btn {
+  position: absolute;
+  color: #fff;
+  font-size: 20px;
+  margin: 26px;
+  cursor: pointer;
+}
